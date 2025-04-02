@@ -28,6 +28,13 @@ export default defineConfig({
     fs: {
       strict: true,
       allow: ['.']
+    },
+    proxy: {
+      '/api': {
+        target: 'http://23.22.158.203:8080',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '')
+      }
     }
   },
   configFile: resolve(__dirname, 'vite.config.js')
