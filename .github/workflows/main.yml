@@ -33,7 +33,7 @@ jobs:
       - uses: amondnet/vercel-action@master
         with:
           vercel-cli: vercel
-          vercel-args: '--prod --build-command "npm run build:prod"'
+          vercel-args: '--prod'
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-org-id: ${{ secrets.ORG_ID}}
           vercel-project-id: ${{ secrets.PROJECT_ID_MAIN}}
